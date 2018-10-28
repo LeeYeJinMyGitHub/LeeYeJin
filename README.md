@@ -104,7 +104,7 @@ git push --tags</code></pre>
 파일 삭제
 <pre><code> git rm --cached --ignore-unmatch [삭제할 파일명] </code></pre>
 히스토리 삭제
-<pre><code> $ git clone [url] # 소스 다운로드
+<pre><code>$ git clone [url] # 소스 다운로드
 $ cd [foler_name] # 해당 폴더 이동
 $ git filter-branch --index-filter 'git rm --cached --ignore-unmatch [삭제할 파일명]' --prune-empty -- --all 
 # 모든 히스토리에서 해당 파일 삭제
@@ -112,10 +112,10 @@ $ git push origin master --force # 서버로 전송 </code></pre>
 히스토리에서 폴더 삭제:
 <pre><code>git filter-branch --tree-filter 'rm -rf vendor/gems' HEAD</code></pre>
 리모트 주소 추가하여 로컬에 싱크하기
-<pre><code>  $ git remote add upstream {리모트 주소}
+<pre><code>$ git remote add upstream {리모트 주소}
 $ git pull upstream {브랜치명}</code></pre>
 최적화
-<pre><code>  $ git gc
+<pre><code>$ git gc
 $ git gc --aggressive</code></pre>  
   
 
@@ -157,10 +157,11 @@ This is a H2
 이메일에서 사용하는 > 블럭인용문자를 이용한다.
 <pre><code>>This is a blockqute.  </code></pre>
 > This is a blockqute.
-> This is a blockqute.
-> This is a blockqute.
+>> This is a blockqute.
+>>> This is a blockqute.
 
-
+#### 2 -  목록
+* 순서있는 목록(번호)
 <pre><code>   </code></pre>
 <pre><code>   </code></pre>
 <pre><code>   </code></pre>
