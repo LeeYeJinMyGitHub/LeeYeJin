@@ -129,23 +129,37 @@ README 파일이나 온라인 문서, 혹은 일반 텍스트 편집기로 문�
 ### 2) 마크다운 문법
 #### 1 - 헤더
 * 큰 제목 : 문서 제목
-<pre><code> This is an H1
+<pre><code>This is an H1
 =============</code></pre>
-This is an H1
+This is a H1
 =============
 * 작은 제목 : 문서 부 제목
-<pre><code> This is an H2
+<pre><code>This is an H2
 ------------</code></pre>
-This is an H2
+This is a H2
 -------------- 
 * 글머리 : #~######까지만 지원
-<pre><code> # This is a H1
+<pre><code># This is a H1
 ## This is a H2
 ### This is a H3
 #### This is a H4
 ##### This is a H5
 ###### This is a H6 </code></pre>
-<pre><code>   </code></pre>
+# This is a H1
+## This is a H2
+### This is a H3
+#### This is a H4
+##### This is a H5
+###### This is a H6 
+
+#### 2 -  BlockQuote
+
+이메일에서 사용하는 > 블럭인용문자를 이용한다.
+<pre><code>>This is a blockqute.  </code></pre>
+> This is a blockqute.
+> This is a blockqute.
+> This is a blockqute.
+
 
 <pre><code>   </code></pre>
 <pre><code>   </code></pre>
