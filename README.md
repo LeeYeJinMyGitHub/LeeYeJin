@@ -254,5 +254,5 @@ __double underscores__
 
 ### 8 - 이미지
 <pre><code>![Alt text](/path/to/img.jpg)
-![Alt text](/path/to/img.jpg "Optional title")/code></pre>
+![Alt text](/path/to/img.jpg "Optional title")</code></pre>
 사이즈 조절은 <pre><code><img width="" height=""></img> </code></pre>를 이용한다.
