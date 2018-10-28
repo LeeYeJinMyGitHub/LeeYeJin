@@ -198,7 +198,7 @@ This is a H2
 
 혼합해서 사용하는것도 가능   
 
-#### 4 -  코드 <pre><code></code></pre>
+#### 4 -  코드<pre><code></code></pre>
 <pre><code> This is a code block. </code></pre>
 
 #### 5 -  수평선
@@ -236,13 +236,8 @@ Link: [Google][googlelink]
 * 인라인  링크
 <pre><code>syntax: [Title](link) </code></pre>
 syntax: [Title](link)
-* 자동연결
-<pre><code><http://example.com/>
-<address@example.com> </code></pre>
-<http://example.com/>
-<address@example.com>
 
-### 7- 강조
+### 7 - 강조
 
 <pre><code>*single asterisks*
 _single underscores_
@@ -257,8 +252,10 @@ __double underscores__
 ++underline++
 ~~cancelline~~
 
-
-<pre><code></code></pre>
+### 8 - 이미지
+<pre><code>![Alt text](/path/to/img.jpg)
+![Alt text](/path/to/img.jpg "Optional title")/code></pre>
+사이즈 조절은 <img width="" height=""></img>를 이용한다.
 
 <pre><code></code></pre>
 
