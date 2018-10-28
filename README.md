@@ -155,16 +155,50 @@ This is a H2
 #### 2 -  BlockQuote
 
 이메일에서 사용하는 > 블럭인용문자를 이용한다.
-<pre><code>>This is a blockqute.  </code></pre>
+<pre><code>>This is a blockqute. 
+>> This is a blockqute.
+>>> This is a blockqute.</code></pre>
 > This is a blockqute.
 >> This is a blockqute.
 >>> This is a blockqute.
 
-#### 2 -  목록
-* 순서있는 목록(번호)
-<pre><code>   </code></pre>
-<pre><code>   </code></pre>
-<pre><code>   </code></pre>
+#### 3 -  목록
+* 순서 있는 목록(번호)
+<pre><code>1. 첫번째
+2. 두번째
+3. 세번째</code></pre>
+1. 첫번째
+2. 두번째
+3. 세번째
+어떠한 번호를 입력해도 순서는 내림차순으로 정의된다.
+* 순서 없는 목록(글머리 기호)
+<pre><code>* 빨강
+  * 녹색
+    * 파랑
+
++ 빨강
+  + 녹색
+    + 파랑
+
+- 빨강
+  - 녹색
+    - 파랑</code></pre>
+* 빨강
+  * 녹색
+    * 파랑
+
++ 빨강
+  + 녹색
+    + 파랑
+
+- 빨강
+  - 녹색
+    - 파랑
+혼합해서 사용하는것도 가능   
+
+#### 4 -  코드
+###<pre><code></code></pre>
+<pre><code> This is a code block. </code></pre>
 
 
 
