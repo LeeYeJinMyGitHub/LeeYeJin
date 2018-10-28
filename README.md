@@ -198,7 +198,8 @@ This is a H2
 
 혼합해서 사용하는것도 가능   
 
-#### 4 -  코드<pre><code></code></pre>
+#### 4 -  코드
+``` pre><code></code></pre>``` 
 <pre><code> This is a code block. </code></pre>
 
 #### 5 -  수평선
@@ -255,4 +256,4 @@ __double underscores__
 ### 8 - 이미지
 <pre><code>![Alt text](/path/to/img.jpg)
 ![Alt text](/path/to/img.jpg "Optional title")</code></pre>
-사이즈 조절은 <pre><code><img width="" height=""></img> </code></pre>를 이용한다.
+사이즈 조절은 ``` img width="" height=""></img>``` 를 이용한다.
