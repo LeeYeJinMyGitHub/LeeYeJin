@@ -1,8 +1,8 @@
 ## LeeYeJin
-
+*****
 2017261038 이예진 과제 
 ===========
-*****
+
 
 1.깃 명령어
 -------------
@@ -129,12 +129,12 @@ README 파일이나 온라인 문서, 혹은 일반 텍스트 편집기로 문�
 ### 2) 마크다운 문법
 #### 1 - 헤더
 * 큰 제목 : 문서 제목
-<pre><code>This is an H1
+<pre><code>This is a H1
 =============</code></pre>
 This is a H1
 =============
 * 작은 제목 : 문서 부 제목
-<pre><code>This is an H2
+<pre><code>This is a H2
 ------------</code></pre>
 This is a H2
 -------------- 
