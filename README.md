@@ -42,7 +42,7 @@ $ git log --pretty=oneline // 각 커밋을 한 줄로 표시</code></pre>
 $ git reset --hard HEAD // 마지막 커밋 상태로 되돌림
 $ git reset HEAD * // 스테이징을 언스테이징으로 변경, ref </code></pre>
 
-### 2) Branch
+### 3) Branch
 master 브랜치를 특정 커밋으로 옮기기
 <pre><code> git checkout better_branch
 git merge --strategy=ours master    # keep the content of this branch, but record a merge
@@ -67,7 +67,7 @@ $ git checkout -b new-branch // 브랜치 생성과 동시에 체크아웃 </cod
 브랜치 이름 변경
 <pre><code>  $ git branch -m {new name} // ref</code></pre>
 
-### 3) Tag
+### 4) Tag
 태그 생성
 <pre><code> git tag -a {tag name} -m {tag message} {commit hash}
 git tag {tag name} {tag name} -f -m "{new message}" // Edit tag message </code></pre>
@@ -79,29 +79,11 @@ git push origin :tags/{tag name} // remote</code></pre>
 git push origin {tag name}
 git push --tags</code></pre>
 
-### 3) 그 외
-파일 삭제
-<pre><code> git rm --cached --ignore-unmatch [삭제할 파일명] </code></pre>
-히스토리 삭제
-<pre><code> $ git clone [url] # 소스 다운로드
-$ cd [foler_name] # 해당 폴더 이동
-$ git filter-branch --index-filter 'git rm --cached --ignore-unmatch [삭제할 파일명]' --prune-empty -- --all 
-# 모든 히스토리에서 해당 파일 삭제
-$ git push origin master --force # 서버로 전송 </code></pre>
-히스토리에서 폴더 삭제:
-<pre><code>git filter-branch --tree-filter 'rm -rf vendor/gems' HEAD</code></pre>
-리모트 주소 추가하여 로컬에 싱크하기
-<pre><code>  $ git remote add upstream {리모트 주소}
-$ git pull upstream {브랜치명}</code></pre>
-최적화
-<pre><code>  $ git gc
-$ git gc --aggressive</code></pre>
-
-### 3) 서버설정
+### 5) 서버설정
 강제 푸시 설정
 <pre><code>  git config receive.denynonfastforwards false </code></pre>
 
-### 4) Alias
+### 6) Alias
 ~/.gitconfig 파일을 설정하여 깃 명령어의 앨리어스를 지정할 수 있다.
 
 ~/.gitconfig > alias 부분:
@@ -118,24 +100,24 @@ $ git gc --aggressive</code></pre>
   tg = tag
   df = diff </code></pre>
   
+### 7) 그 외
+파일 삭제
+<pre><code> git rm --cached --ignore-unmatch [삭제할 파일명] </code></pre>
+히스토리 삭제
+<pre><code> $ git clone [url] # 소스 다운로드
+$ cd [foler_name] # 해당 폴더 이동
+$ git filter-branch --index-filter 'git rm --cached --ignore-unmatch [삭제할 파일명]' --prune-empty -- --all 
+# 모든 히스토리에서 해당 파일 삭제
+$ git push origin master --force # 서버로 전송 </code></pre>
+히스토리에서 폴더 삭제:
+<pre><code>git filter-branch --tree-filter 'rm -rf vendor/gems' HEAD</code></pre>
+리모트 주소 추가하여 로컬에 싱크하기
+<pre><code>  $ git remote add upstream {리모트 주소}
+$ git pull upstream {브랜치명}</code></pre>
+최적화
+<pre><code>  $ git gc
+$ git gc --aggressive</code></pre>  
   
-  
-<pre><code>   </code></pre>
-<pre><code>   </code></pre>
-
-<pre><code>   </code></pre>
-<pre><code>   </code></pre>
-<pre><code>   </code></pre>
-
-
-<pre><code>   </code></pre>
-<pre><code>   </code></pre>
-<pre><code>   </code></pre>
-
-<pre><code>   <pre><code> 
-<pre><code>   </code></pre>
-<pre><code>   </code></pre>
-
 
 2.마크다운 문법
 ----------
@@ -148,7 +130,18 @@ README 파일이나 온라인 문서, 혹은 일반 텍스트 편집기로 문�
 # 1 - 헤더
 * 큰 제목 : 문서 제목
 <pre><code>  is an H1
-=============<pre><code> 
-
+=============</code></pre>
 This is an H1
 =============
+
+  
+  
+<pre><code>   </code></pre>
+<pre><code>   </code></pre>
+
+<pre><code>   </code></pre>
+<pre><code>   </code></pre>
+<pre><code>   </code></pre>
+
+
+
