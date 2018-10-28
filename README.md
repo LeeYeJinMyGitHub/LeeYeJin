@@ -121,22 +121,30 @@ $ git gc --aggressive</code></pre>
 
 2.마크다운 문법
 ----------
-## 1) 마크다운이란? 
+### 1) 마크다운이란? 
 마크다운(markdown)은 텍스트 기반의 마크업 언어로, 2004년 존 그루버에 의해 만들어졌다. 
 README 파일이나 온라인 문서, 혹은 일반 텍스트 편집기로 문서 양식을 편집할 때 쓰인다. 
 마크다운을 이용해 작성된 문서는 쉽게 HTML 등 다른 문서형태로 변환이 가능하다.
 
-## 2) 마크다운 문법
-# 1 - 헤더
+### 2) 마크다운 문법
+#### 1 - 헤더
 * 큰 제목 : 문서 제목
-<pre><code>  is an H1
+<pre><code> This is an H1
 =============</code></pre>
 This is an H1
 =============
-
-  
-  
-<pre><code>   </code></pre>
+* 작은 제목 : 문서 부 제목
+<pre><code> This is an H2
+------------</code></pre>
+This is an H2
+-------------- 
+* 글머리 : #~######까지만 지원
+<pre><code> # This is a H1
+## This is a H2
+### This is a H3
+#### This is a H4
+##### This is a H5
+###### This is a H6 </code></pre>
 <pre><code>   </code></pre>
 
 <pre><code>   </code></pre>
