@@ -31,57 +31,57 @@
 커밋메세지 수정
 <pre><code> $ git commit --amend // 마지막 커밋메세지 수정(ref)</code></pre>
 간단한 commit방법
-<pre><code> $ git add {변경한 파일명}
+<pre><code>$ git add {변경한 파일명}
 $ git commit -m “{변경 내용}"</code></pre>
 커밋 이력 확인
-<pre><code> $ git log // 모든 커밋로그 확인
+<pre><code>$ git log // 모든 커밋로그 확인
 $ git log -3 // 최근 3개 커밋로그 확인
 $ git log --pretty=oneline // 각 커밋을 한 줄로 표시</code></pre>
 커밋 취소
-<pre><code> $ git reset HEAD^ // 마지막 커밋 삭제
+<pre><code>$ git reset HEAD^ // 마지막 커밋 삭제
 $ git reset --hard HEAD // 마지막 커밋 상태로 되돌림
 $ git reset HEAD * // 스테이징을 언스테이징으로 변경, ref </code></pre>
 
 ### 3) Branch
 master 브랜치를 특정 커밋으로 옮기기
-<pre><code> git checkout better_branch
+<pre><code>git checkout better_branch
 git merge --strategy=ours master    # keep the content of this branch, but record a merge
 git checkout master
 git merge better_branch            # fast-forward master up to the merge</code></pre>
 브랜치 목록
-<pre><code> $ git branch // 로컬
+<pre><code>$ git branch // 로컬
 $ git branch -r // 리모트 
 $ git branch -a // 로컬, 리모트 포함된 모든 브랜치 보기 </code></pre>
 브랜치 생성
-<pre><code> git branch new master // master -> new 브랜치 생성
+<pre><code>git branch new master // master -> new 브랜치 생성
 git push origin new // new 브랜치를 리모트로 보내기</code></pre>
 브랜치 삭제
-<pre><code> git branch -D {삭제할 브랜치 명} // local
+<pre><code>git branch -D {삭제할 브랜치 명} // local
 git push origin :{the_remote_branch} // remote </code></pre>
 빈 브랜치 생성
-<pre><code> $ git checkout --orphan {새로운 브랜치 명}
+<pre><code>$ git checkout --orphan {새로운 브랜치 명}
 $ git commit -a // 커밋해야 새로운 브랜치 생성됨
 $ git checkout -b new-branch // 브랜치 생성과 동시에 체크아웃 </code></pre>
 리모트 브랜치 가져오기
-<pre><code> $ git checkout -t origin/{가져올 브랜치명} // ref </code></pre>
+<pre><code>$ git checkout -t origin/{가져올 브랜치명} // ref </code></pre>
 브랜치 이름 변경
 <pre><code>  $ git branch -m {new name} // ref</code></pre>
 
 ### 4) Tag
 태그 생성
-<pre><code> git tag -a {tag name} -m {tag message} {commit hash}
+<pre><code>git tag -a {tag name} -m {tag message} {commit hash}
 git tag {tag name} {tag name} -f -m "{new message}" // Edit tag message </code></pre>
 태그 삭제
-<pre><code> git tag -d {tag name}
+<pre><code>git tag -d {tag name}
 git push origin :tags/{tag name} // remote</code></pre>
 태그 푸시
-<pre><code> git push origin --tags
+<pre><code>git push origin --tags
 git push origin {tag name}
 git push --tags</code></pre>
 
 ### 5) 서버설정
 강제 푸시 설정
-<pre><code>  git config receive.denynonfastforwards false </code></pre>
+<pre><code>git config receive.denynonfastforwards false </code></pre>
 
 ### 6) Alias
 ~/.gitconfig 파일을 설정하여 깃 명령어의 앨리어스를 지정할 수 있다.
@@ -170,6 +170,7 @@ This is a H2
 1. 첫번째
 2. 두번째
 3. 세번째
+
 어떠한 번호를 입력해도 순서는 내림차순으로 정의된다.
 * 순서 없는 목록(글머리 기호)
 <pre><code>* 빨강
@@ -194,11 +195,73 @@ This is a H2
 - 빨강
   - 녹색
     - 파랑
+
 혼합해서 사용하는것도 가능   
 
-#### 4 -  코드
-###<pre><code></code></pre>
+#### 4 -  코드 <pre><code></code></pre>
 <pre><code> This is a code block. </code></pre>
 
+#### 5 -  수평선
+<pre><code>* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+</code></pre>
+* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+#### 6 -  링크
+* 참조링크
+<pre><code>[link keyword][id]
+[id]: URL "Optional Title here"
+
+Link: [Google][googlelink]
+[googlelink]: https://google.com "Go google" </code></pre>
+[link keyword][id]
+[id]: URL "Optional Title here"
+
+Link: [Google][googlelink]
+[googlelink]: https://google.com "Go google"
+* 인라인  링크
+<pre><code>syntax: [Title](link) </code></pre>
+syntax: [Title](link)
+* 자동연결
+<pre><code><http://example.com/>
+<address@example.com> </code></pre>
+<http://example.com/>
+<address@example.com>
+
+### 7- 강조
+
+<pre><code>*single asterisks*
+_single underscores_
+**double asterisks**
+__double underscores__
+++underline++
+~~cancelline~~ </code></pre>
+*single asterisks*
+_single underscores_
+**double asterisks**
+__double underscores__
+++underline++
+~~cancelline~~
 
 
+<pre><code></code></pre>
+
+<pre><code></code></pre>
+
+<pre><code></code></pre>
+
+<pre><code></code></pre>
