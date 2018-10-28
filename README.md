@@ -5,9 +5,9 @@
 *****
 
 1.깃 명령어
----------
+-------------
 
-### 기본 명령어
+### 1) 기본 명령어
 저장소 생성 
 <pre><code> git init </code></pre>
 원격 저장소로부터 복제 
@@ -18,42 +18,123 @@
 <pre><code> git add {파일 이름} </code></pre>
 변경된 모든 파일 스테이징 
 <pre><code> git add * </code></pre>
+원격으로 보내기
+<pre><code> git push origin master </code></pre>
+원격 저장소 추가
+<pre><code> git remote add origin {원격서버주소} </code></pre>
 
+### 2) Commit
+커밋 (변경을 기록) 
 <pre><code> git commit -m “{변경 내용}” </code></pre>
+커밋 합치기 
+<pre><code> git rebase -i HEAD~4 // 최신 4개의 커밋을 하나로 합치기</code></pre>
+커밋메세지 수정
+<pre><code> $ git commit --amend // 마지막 커밋메세지 수정(ref)</code></pre>
+간단한 commit방법
+<pre><code> $ git add {변경한 파일명}
+$ git commit -m “{변경 내용}"</code></pre>
+커밋 이력 확인
+<pre><code> $ git log // 모든 커밋로그 확인
+$ git log -3 // 최근 3개 커밋로그 확인
+$ git log --pretty=oneline // 각 커밋을 한 줄로 표시</code></pre>
+커밋 취소
+<pre><code> $ git reset HEAD^ // 마지막 커밋 삭제
+$ git reset --hard HEAD // 마지막 커밋 상태로 되돌림
+$ git reset HEAD * // 스테이징을 언스테이징으로 변경, ref </code></pre>
 
-<pre><code> </code></pre>
-<pre><code> </code></pre>
-<pre><code> </code></pre>
+### 2) Branch
+master 브랜치를 특정 커밋으로 옮기기
+<pre><code> git checkout better_branch
+git merge --strategy=ours master    # keep the content of this branch, but record a merge
+git checkout master
+git merge better_branch            # fast-forward master up to the merge</code></pre>
+브랜치 목록
+<pre><code> $ git branch // 로컬
+$ git branch -r // 리모트 
+$ git branch -a // 로컬, 리모트 포함된 모든 브랜치 보기 </code></pre>
+브랜치 생성
+<pre><code> git branch new master // master -> new 브랜치 생성
+git push origin new // new 브랜치를 리모트로 보내기</code></pre>
+브랜치 삭제
+<pre><code> git branch -D {삭제할 브랜치 명} // local
+git push origin :{the_remote_branch} // remote </code></pre>
+빈 브랜치 생성
+<pre><code> $ git checkout --orphan {새로운 브랜치 명}
+$ git commit -a // 커밋해야 새로운 브랜치 생성됨
+$ git checkout -b new-branch // 브랜치 생성과 동시에 체크아웃 </code></pre>
+리모트 브랜치 가져오기
+<pre><code> $ git checkout -t origin/{가져올 브랜치명} // ref </code></pre>
+브랜치 이름 변경
+<pre><code>  $ git branch -m {new name} // ref</code></pre>
 
-<pre><code> </code></pre>
-<pre><code> </code></pre>
+### 3) Tag
+태그 생성
+<pre><code> git tag -a {tag name} -m {tag message} {commit hash}
+git tag {tag name} {tag name} -f -m "{new message}" // Edit tag message </code></pre>
+태그 삭제
+<pre><code> git tag -d {tag name}
+git push origin :tags/{tag name} // remote</code></pre>
+태그 푸시
+<pre><code> git push origin --tags
+git push origin {tag name}
+git push --tags</code></pre>
 
-<pre><code> </code></pre>
-<pre><code> </code></pre>
-<pre><code> </code></pre>
+### 3) 그 외
+파일 삭제
+<pre><code> git rm --cached --ignore-unmatch [삭제할 파일명] </code></pre>
+히스토리 삭제
+<pre><code> $ git clone [url] # 소스 다운로드
+$ cd [foler_name] # 해당 폴더 이동
+$ git filter-branch --index-filter 'git rm --cached --ignore-unmatch [삭제할 파일명]' --prune-empty -- --all 
+# 모든 히스토리에서 해당 파일 삭제
+$ git push origin master --force # 서버로 전송 </code></pre>
+히스토리에서 폴더 삭제:
+<pre><code>git filter-branch --tree-filter 'rm -rf vendor/gems' HEAD</code></pre>
+리모트 주소 추가하여 로컬에 싱크하기
+<pre><code>  $ git remote add upstream {리모트 주소}
+$ git pull upstream {브랜치명}</code></pre>
+최적화
+<pre><code>  $ git gc
+$ git gc --aggressive</code></pre>
 
-<pre><code> </code></pre>
-<pre><code> </code></pre>
-<pre><code> </code></pre>
+### 3) 서버설정
+강제 푸시 설정
+<pre><code>  git config receive.denynonfastforwards false </code></pre>
 
-<pre><code> </code></pre>
-<pre><code> </code></pre>
+### 4) Alias
+~/.gitconfig 파일을 설정하여 깃 명령어의 앨리어스를 지정할 수 있다.
+
+~/.gitconfig > alias 부분:
+<pre><code> [alias]
+  br = branch
+  co = checkout
+  rb = rebase
+  st = status
+  cm = commit
+  pl = pull
+  ps = push
+  lg = log --graph --abbrev-commit --decorate --format=format:'%C(cyan)%h%C(reset) - %C(green)(%ar)%C(reset)  %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(yellow)%d%C(reset)' --all
+  ad = add
+  tg = tag
+  df = diff </code></pre>
+  
+  
+  
+<pre><code>   </code></pre>
+<pre><code>   </code></pre>
+
+<pre><code>   </code></pre>
+<pre><code>   </code></pre>
+<pre><code>   </code></pre>
 
 
-<pre><code> </code></pre>
-<pre><code> </code></pre>
-<pre><code> </code></pre>
+<pre><code>   </code></pre>
+<pre><code>   </code></pre>
+<pre><code>   </code></pre>
 
-<pre><code> </code></pre>
-<pre><code> </code></pre>
-<pre><code> </code></pre>
-
-<pre><code> </code></pre>
-<pre><code> </code></pre>
-
-
-
-
+<pre><code>   </code></pre>
+<pre><code>   </code></pre>
+<pre><code>   </code></pre>
 
 
 2.마크다운 문법
